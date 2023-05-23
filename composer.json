@@ -1,0 +1,33 @@
+{
+    "name": "brainboxlabs/persist-query",
+    "description": "Persist request query parameters in Laravel controllers",
+    "autoload": {
+        "psr-4": {
+            "BrainBoxLabs\\PersistQuery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrainBoxLabs\\PersistQuery\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "James A.",
+            "email": "james@brainboxlabs.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BrainBoxLabs\\PersistQuery\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.27"
+    }
+}
