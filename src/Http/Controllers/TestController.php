@@ -27,7 +27,7 @@ class TestController extends Controller
     public function postContactUs(Request $request)
     {
         return redirect()
-            ->to('persist-query/books')
+            ->to('testing/books')
             ->with('success', 'Thanks for reaching out!');
     }
 }

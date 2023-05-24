@@ -21,10 +21,10 @@ class TestingServiceProvider extends ServiceProvider
     private function registerRoutes()
     {
         Route::group([
-            'prefix' => 'persist-query',
+            'prefix' => 'testing',
             'namespace' => 'BrainBoxLabs\PersistQuery\Http\Controllers',
         ], function() {
-            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+            $this->loadRoutesFrom(__DIR__.'/../routes/testing.php');
         });
     }
 }

@@ -8,19 +8,19 @@ class PersistTest extends TestCase
 {
     public function testUrlQueryIsPersisted()
     {
-        $response = $this->get('persist-query/books');
+        $response = $this->get('testing/books');
         $response->assertExactJson([]);
 
-        $response = $this->get('persist-query/books?name=invisible&author=Mark');
+        $response = $this->get('testing/books?name=invisible&author=Mark');
         $response->assertExactJson([
             'name' => 'invisible',
             'author' => 'Mark',
         ]);
 
-        $response = $this->get('persist-query/home');
+        $response = $this->get('testing/home');
         $response->assertSeeText('home page');
 
-        $response = $this->followingRedirects()->get('persist-query/books');
+        $response = $this->followingRedirects()->get('testing/books');
         $response->assertExactJson([
             'name' => 'invisible',
             'author' => 'Mark',
@@ -29,16 +29,16 @@ class PersistTest extends TestCase
     
     public function testUrlQueryIsPersistedAfterRedirect()
     {
-        $response = $this->get('persist-query/books');
+        $response = $this->get('testing/books');
         $response->assertExactJson([]);
 
-        $response = $this->get('persist-query/books?name=invisible&author=Mark');
+        $response = $this->get('testing/books?name=invisible&author=Mark');
         $response->assertExactJson([
             'name' => 'invisible',
             'author' => 'Mark',
         ]);
 
-        $response = $this->followingRedirects()->post('persist-query/contact-us', []);
+        $response = $this->followingRedirects()->post('testing/contact-us', []);
         $response->assertExactJson([
             'name' => 'invisible',
             'author' => 'Mark',
