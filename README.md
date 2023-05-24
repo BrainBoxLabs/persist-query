@@ -35,4 +35,4 @@ Suppose you run a bookstore website with two pages; `/home` and `/books`. The `/
 
 
 
- The `persist-query:action-name` middleware should be used with `GET` controller actions.
+ The `persist-query:action_name,another_action_name,...` middleware should be used with `GET` controller actions.
