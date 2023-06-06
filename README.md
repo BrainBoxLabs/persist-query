@@ -24,12 +24,12 @@ Suppose you run a bookstore website with two pages; `/home` and `/books`. The `/
     
 	    public function __construct() 
 	    { 
-		    $this->middleware('persist-query:index');
+	    	$this->middleware('persist-query:index');
 	    } 
      
 	    public function index(Request $request) 
 	    { 
-		    // ...
+	    	// ...
 	    } 
     }
 
